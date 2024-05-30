@@ -8,10 +8,7 @@ namespace PersonIdentifier
 {
     abstract class UserError
     {
-        public virtual string UEMessage()
-        {
-            return "";
-        }
+       public abstract string UEMessage();
     }
 
    internal class NumericInputError : UserError 
