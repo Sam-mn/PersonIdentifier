@@ -9,8 +9,8 @@ namespace PersonIdentifier
     internal class Person
     {
         private int age;
-        private string fName;
-        private string lName;
+        private string? fName;
+        private string? lName;
         private double height;
         private double weight;
         public int Age 

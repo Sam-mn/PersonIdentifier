@@ -46,6 +46,50 @@ namespace PersonIdentifier
 
                 Console.WriteLine("---------------------------------------------------------------------");
 
+                var hourse = new Hourse("Joe", 150, 4, "red");
+                var dog = new Dog("Dogge", 30, 2, "Bulldog");
+                var hedgehog = new Hedgehog("Uffe",2, 1, 300);
+                var worm = new Worm("Ebba", 1, 2, true);
+                var bird = new Bird("Carl", 0.5, 1, 1);
+                var wolf = new Wolf("wolffy", 20, 3, true);
+                var wolfman = new Wolfman("Kris", 10, 2, false);
+
+                var AnimalsList = new List<Animal>()
+                {
+                    hourse,
+                    dog,
+                    hedgehog, 
+                    worm,
+                    bird,
+                    wolf,
+                    wolfman
+                };
+
+                foreach (var animal in AnimalsList) 
+                {
+                  Console.WriteLine(animal.GetType().Name);
+                  animal.DoSound();
+                  
+                    if (animal is Wolfman wolfmanType) 
+                    {
+                        wolfmanType.Talk();
+                    }
+
+                    Console.WriteLine(animal.Stats());
+                }
+                
+                Console.WriteLine("---------------------------------------------------------------------");
+                Console.WriteLine("Dogs");
+
+                foreach (var animal in AnimalsList)
+                {
+                    if (animal is Dog doggy)
+                    {
+                        Console.WriteLine(animal.Stats());
+                        
+                      Console.WriteLine(doggy.Hungry());
+                    }
+                }
             }
             catch (Exception e) 
             { 

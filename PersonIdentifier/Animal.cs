@@ -18,6 +18,8 @@ namespace PersonIdentifier
             Age = age;
         }
         public abstract void DoSound();
+
+        public abstract string Stats();
     }
 
     internal class Hourse : Animal
@@ -30,6 +32,11 @@ namespace PersonIdentifier
 
         public override void DoSound() {
             Console.WriteLine("Hourse sound");
+        }
+
+        public override string Stats()
+        {
+            return $"Hourse: {this.Name}, {this.Wieght}, {this.Age}, {this.Color}";
         }
     }
 
@@ -45,12 +52,22 @@ namespace PersonIdentifier
         {
             Console.WriteLine("Dog sound");
         }
+
+        public override string Stats()
+        {
+            return $"Dog: {this.Name}, {this.Wieght}, {this.Age}, {this.BreedOfDog}";
+        }
+
+        public string Hungry()
+        {
+            return "I need more food.";
+        }
     }
 
     internal class Hedgehog : Animal
     {
-        public string NrOfSpikes;
-        public Hedgehog(string name, double weight, int age, string nrOfSpikes) : base(name, weight, age)
+        public int NrOfSpikes;
+        public Hedgehog(string name, double weight, int age, int nrOfSpikes) : base(name, weight, age)
         {
             NrOfSpikes = nrOfSpikes;
         }
@@ -58,6 +75,11 @@ namespace PersonIdentifier
         public override void DoSound()
         {
             Console.WriteLine("Hedgehog sound");
+        }
+
+        public override string Stats()
+        {
+            return $"Hedgehog: {this.Name}, {this.Wieght}, {this.Age}, {this.NrOfSpikes}";
         }
     }
 
@@ -73,6 +95,11 @@ namespace PersonIdentifier
         {
             Console.WriteLine("Worm sound");
         }
+
+        public override string Stats()
+        {
+            return $"Worm: {this.Name}, {this.Wieght}, {this.Age}, {this.IsPoisonous}";
+        }
     }
 
     internal class Bird : Animal
@@ -87,6 +114,11 @@ namespace PersonIdentifier
         {
             Console.WriteLine("Bird sound");
         }
+
+        public override string Stats()
+        {
+            return $"Bird: {this.Name}, {this.Wieght}, {this.Age}, {this.WingSpan}";
+        }
     }
 
     internal class Wolf : Animal
@@ -100,6 +132,11 @@ namespace PersonIdentifier
         public override void DoSound()
         {
             Console.WriteLine("Wolf sound");
+        }
+
+        public override string Stats()
+        {
+            return $"Wolf: {this.Name}, {this.Wieght}, {this.Age}, {this.IsBlackAndWhite}";
         }
     }
 
@@ -166,11 +203,20 @@ namespace PersonIdentifier
         {
             Console.WriteLine("I am a wolfman.");
         }
+
+        public override string Stats()
+        {
+            return $"Wolfman {this.Name}, {this.Wieght}, {this.Age}, {this.IsBlackAndWhite}";
+        }
     }
 
     // 13. F: I Birds klass.
 
     // 14. F: I Animals Klass.
 
+    // 3.4)
+    // 9. F: För att dom har olika properties.
+    // 10. F: Animal
+    // 17. F: För att Hungry metoden finns inte i Animal kalssen.
 
 }
