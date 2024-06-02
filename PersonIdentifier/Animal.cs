@@ -98,7 +98,7 @@ namespace PersonIdentifier
 
         public override string Stats()
         {
-            return $"Worm: {this.Name}, {this.Wieght}, {this.Age}, {this.IsPoisonous}";
+            return $"Worm: {this.Name}, {this.Wieght}, {this.Age}, {(this.IsPoisonous ? "poisonous" : "not poisonous")}";
         }
     }
 
@@ -136,7 +136,7 @@ namespace PersonIdentifier
 
         public override string Stats()
         {
-            return $"Wolf: {this.Name}, {this.Wieght}, {this.Age}, {this.IsBlackAndWhite}";
+            return $"Wolf: {this.Name}, {this.Wieght}, {this.Age}, {(this.IsBlackAndWhite ? "black and white" : "gray and white")}";
         }
     }
 
@@ -153,6 +153,11 @@ namespace PersonIdentifier
         {
             Console.WriteLine("Pelican sound");
         }
+
+        public override string Stats()
+        {
+            return $"Pelican: {this.Name}, {this.Wieght}, {this.Age}, {(this.IsWhite ? "white" : "gray")}";
+        }
     }
 
     internal class Flamingo : Bird
@@ -167,6 +172,11 @@ namespace PersonIdentifier
         {
             Console.WriteLine("Flamingo sound");
         }
+
+        public override string Stats()
+        {
+            return $"Flamingo: {this.Name}, {this.Wieght}, {this.Age}, {(this.CanDance? "can dance": "can not dance")}";
+        }
     }
 
     internal class Swan : Bird
@@ -180,6 +190,11 @@ namespace PersonIdentifier
         public override void DoSound()
         {
             Console.WriteLine("Swan sound");
+        }
+
+        public override string Stats()
+        {
+            return $"Swan: {this.Name}, {this.Wieght}, {this.Age}, {(this.IsBlack ? "black" : "white")}";
         }
     }
 
@@ -206,17 +221,16 @@ namespace PersonIdentifier
 
         public override string Stats()
         {
-            return $"Wolfman {this.Name}, {this.Wieght}, {this.Age}, {this.IsBlackAndWhite}";
+            return $"Wolfman {this.Name}, {this.Wieght}, {this.Age}, {(this.IsBlackAndWhite ? "black and white" : "white and gray")}";
         }
     }
-
+    // 3.3) 
     // 13. F: I Birds klass.
-
     // 14. F: I Animals Klass.
 
     // 3.4)
-    // 9. F: För att dom har olika properties.
-    // 10. F: Animal
-    // 17. F: För att Hungry metoden finns inte i Animal kalssen.
-
+    //9. F: För att listan har typen "Dog" och accepterar bara instanser av Dog eller med en type som ärvar från Dog.
+    //10. F: Typen måste vara Animal för att alla djur ärver från animal.
+    //13. F: Alla djurens Stats kommer att skrivs ut genom att anropa Stats() metoden för varje objekt i listan.
+    //17. F: För att Hungry metoden finns bara i Dogs klassen och inte i Animal klassen.
 }

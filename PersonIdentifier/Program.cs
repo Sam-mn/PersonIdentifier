@@ -52,6 +52,7 @@ namespace PersonIdentifier
                 var worm = new Worm("Ebba", 1, 2, true);
                 var bird = new Bird("Carl", 0.5, 1, 1);
                 var wolf = new Wolf("wolffy", 20, 3, true);
+                var swan = new Swan("swan", 20, 1, 10, true);
                 var wolfman = new Wolfman("Kris", 10, 2, false);
 
                 var AnimalsList = new List<Animal>()
@@ -62,7 +63,8 @@ namespace PersonIdentifier
                     worm,
                     bird,
                     wolf,
-                    wolfman
+                    wolfman,
+                    swan
                 };
 
                 foreach (var animal in AnimalsList) 
@@ -76,10 +78,22 @@ namespace PersonIdentifier
                     }
 
                     Console.WriteLine(animal.Stats());
+                    Console.WriteLine("--------------------------------------------------");
+
                 }
-                
+
                 Console.WriteLine("---------------------------------------------------------------------");
                 Console.WriteLine("Dogs");
+                var dog1 = new Dog("Dog1", 20, 2, "Bulldog");
+                var dog2 = new Dog("Dog2", 15, 1, "Chihuahua");
+                var dog3 = new Dog("Dog3", 25, 3, "Poodie");
+                var dog4 = new Dog("Dog4", 30, 2, "Husky");
+
+                var dogsList = new List<Dog>() { dog1, dog2, dog3, dog4 };
+
+                var hourse1 = new Hourse("Noe", 150, 8, "White");
+
+                //dogsList.Add(hourse1);
 
                 foreach (var animal in AnimalsList)
                 {
